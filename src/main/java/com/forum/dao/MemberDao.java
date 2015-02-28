@@ -1,9 +1,7 @@
 package com.forum.dao;
 
-
+import java.lang.reflect.Member;
 import java.util.List;
-
-import com.forum.entity.Member;
 
 public interface MemberDao {
 
