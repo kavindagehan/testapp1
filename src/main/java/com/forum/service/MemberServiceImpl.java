@@ -3,6 +3,7 @@ package com.forum.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.forum.dao.MemberDao;
@@ -12,6 +13,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	
 @Autowired	
+@Qualifier("memberDaoImpl")
 private MemberDao dao;
 
 	@Transactional

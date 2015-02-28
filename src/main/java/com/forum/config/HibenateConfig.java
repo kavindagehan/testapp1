@@ -32,7 +32,7 @@ public class HibenateConfig {
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());
-		sessionFactory.setPackagesToScan(new String[] { "com.forum.entity"});
+		sessionFactory.setPackagesToScan(new String[] { "com.forum.entity","com.forum.entity.type"});
 		sessionFactory.setHibernateProperties(hibernateProperties());
 //		sessionFactory.setEntityInterceptor(interceptor);
 		return sessionFactory;

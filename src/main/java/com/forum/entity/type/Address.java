@@ -10,7 +10,7 @@ public class Address {
 	private String addressLine2;
 	private String city;
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public String getAddressLine1() {
 		return addressLine1;
 	}
@@ -18,7 +18,7 @@ public class Address {
 		this.addressLine1 = addressLine1;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public String getAddressLine2() {
 		return addressLine2;
 	}
@@ -26,7 +26,7 @@ public class Address {
 		this.addressLine2 = addressLine2;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public String getCity() {
 		return city;
 	}

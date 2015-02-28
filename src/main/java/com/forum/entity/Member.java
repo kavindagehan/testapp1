@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import com.forum.entity.type.Address;
 import com.forum.entity.type.Name;
@@ -25,11 +28,15 @@ public class Member implements Serializable {
 	private  Address address;
 	private Post post;
 	private Tag tag;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(length=255)
 	public Integer getId() {
 		return id;
 	}
 	
-	@Column(nullable=false,length=255)
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -37,7 +44,7 @@ public class Member implements Serializable {
 		return name;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public void setName(Name name) {
 		this.name = name;
 	}
@@ -45,12 +52,12 @@ public class Member implements Serializable {
 		return address;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public void setAddress(Address address) {
 		this.address = address;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public Post getPost() {
 		return post;
 	}
@@ -58,7 +65,7 @@ public class Member implements Serializable {
 		this.post = post;
 	}
 	
-	@Column(nullable=false,length=255)
+	@Column(length=255)
 	public Tag getTag() {
 		return tag;
 	}
