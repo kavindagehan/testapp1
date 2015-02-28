@@ -11,7 +11,7 @@ import com.forum.entity.Member;
 
 public class MemberServiceImpl implements MemberService {
 	
-	
+	//com
 @Autowired	
 @Qualifier("memberDaoImpl")
 private MemberDao dao;

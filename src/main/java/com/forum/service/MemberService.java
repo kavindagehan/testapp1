@@ -6,7 +6,7 @@ import java.util.List;
 import com.forum.entity.Member;
 
 public interface MemberService {
-
+//commnt
 	public List<Member> viewMember();
 	public void insertMember(Member member);
 	public void updateMember(Member member);
